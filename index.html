@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet' />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="../fitness/img/logo.png" class="logo">
+            <nav>
+                <ul id=navlist>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Abouth</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Conatct</a></li>
+
+                </ul>
+            </nav>
+            <img class="menuicon" src="../fitness/img/iconfinder_icons_menu_1564512.png" onclick="togglemenu()">
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 class="membertxt">Get Membership Now </h1>
+                <h2>Hysical fitness is a state of health and well-being and, more specifically, the ability to perform
+                    aspects of sports, occupations and daily activities.
+                    <h4>$20</h4>
+                </h2><button type="button">Learn More <i class='bx bxs-right-arrow-circle'
+                        style='color:#ffffff'></i></button>
+            </div>
+            <div class="col2">
+                <img src="../fitness/img/fitness2.png" class="man" />
+                <div class="color-box">
+                    <img src="../fitness/img/add.png" alt="" />
+                    <p>Get now 30% off</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class=card-container>
+        <div class="card">
+            <div class="circle">
+                <h1>Budject</h1>
+            </div>
+            <div class="content">
+
+                <p>
+                    nnergy memberships come with a $50 per month early termination policy, the total amount can be
+                    applied to other packages. As an industry standard,
+
+                </p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="circle">
+                <h1>Medium</h1>
+            </div>
+            <div class="content">
+                <p>
+                    nnergy memberships come with a $50 per month early termination policy, the total amount can be
+                    applied to other packages. As an industry standard,
+
+                </p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="circle">
+                <h1>Premium</h1>
+            </div>
+            <div class="content">
+                <p>
+                    nnergy memberships come with a $50 per month early termination policy, the total amount can be
+                    applied to other packages. As an industry standard,
+
+                </p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <div class="about-container">
+            <h1>Who are We</h1>
+
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
+                professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+                consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
+                literature</p>
+
+        </div>
+
+    </div>
+    <div class="triangle-left"></div>
+    <div class=form-container>
+
+        <form class="form">
+
+            <h2>CONTACT US</h2>
+            <p type="Name:"><input placeholder="Write your name here.."></input></p>
+            <p type="Email:"><input placeholder="Let us know how to contact you back.."></input></p>
+            <p type="Message:"><input placeholder="What would you like to tell us.."></input></p>
+            <button>Send Message</button>
+            <div class=phone-container>
+                <span class="fa fa-phone"></span>001 1023 567
+                <span class="fa fa-envelope-o"></span> contact@company.com
+            </div>
+        </form>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var navmenu = document.getElementById("navlist");
+        navlist.style.maxHeight = "0px";
+
+        function togglemenu() {
+            if (navlist.style.maxHeight == "0px") {
+                navlist.style.maxHeight = "150px";
+                // navlist.style.display = "block";
+            } else {
+                navlist.style.maxHeight = "0px";
+                // navlist.style.display = "none";
+            }
+        }
+    </script>
+    <footer>
+        <div class="footer">
+            <div class="column">
+                <ul>
+                    <li class="title">FIT FITNESS</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <ul>
+                    <li class="title">OTHER LINKS</li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Tickets</a></li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <ul>
+                    <li class="title">SHORT CUT</li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <ul>
+                    <li class="title">Subcribe Us</li>
+                    <li>
+                        <form action="#" method="post">
+                            <input type="email" name="email" placeholder="Email*" maxlength="80" required /><button
+                                class="btn1">Submit</button>
+                        </form>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="sub-footer">
+        INFERNO Copyright © 2021 Inferno - All rights reserved || Designed By: Mahesh
+    </div>
+
+</body>
+
+</html>
