@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
+:root {
+  --header: 4rem;
+
+  --first-color: #26a69a;
+  --first-color-lighter: #b9e3ee;
+  --title-color: #11443f;
+  --text-color: #5b7b78;
+  --body-color: #f8faff;
+
+  --gradient-color: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+
+  --body-font: 'Montserrat', sans-serif;
+  --big-font: 3rem;
+  --meadium-font: 1.25rem;
+  --normal-font: 0.938rem;
+
+  --meadium-bold: 500;
+  --semi-bold: 600;
+
+  --z-tool: 10;
+  --z-fixed: 100;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +31,7 @@
 }
 body {
   overflow-x: hidden;
+  background: var(--body-color);
 }
 
 .container {
@@ -21,7 +45,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  height: 80px;
+  height: var(--header);
 }
 .logo {
   width: 120px;
@@ -50,7 +74,7 @@ nav ul li a {
   font-weight: 500;
 }
 nav ul li a:hover {
-  color: #2cff02;
+  color: var(--first-color);
 }
 .row {
   display: flex;
@@ -65,7 +89,7 @@ nav ul li a:hover {
 
 .membertxt {
   font-size: 30px;
-  color: #000000;
+  color: var(--title-color);
   margin-bottom: 20px;
 }
 h4 {
@@ -75,11 +99,11 @@ button {
   width: 140px;
   border: 0;
   outline: none;
-  color: #fff;
-  background: linear-gradient(to right, #c0fe44, #2cff02);
+  color: var(--text-color);
+  background: var(--gradient-color);
   padding: 10px 20px;
   margin: 7px;
-  border-radius: 6px;
+  border-radius: 10rem;
   cursor: pointer;
   transition: width 0.5s;
 }
@@ -105,7 +129,7 @@ button i {
   position: absolute;
   right: 0;
   top: 5;
-  background: linear-gradient(#c0fe44, #2cff02);
+  background: var(--gradient-color);
   border-radius: 20px 0 0 20px;
   height: 60%;
   width: 150%;
@@ -126,304 +150,19 @@ button i {
   color: #ffffff;
   font-size: 20px;
 }
-.card-container {
-  position: absolute;
-  flex: 1;
-  right: 70px;
-  top: 700px;
-  width: 1150px;
-  padding: 60px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.card-container .card {
-  position: relative;
-  width: 300px;
-  height: 420px;
-  background-color: #ffff;
-  margin: 20px;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
-  text-align: center;
-}
-
-.card-container .card .circle {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #000000;
-  clip-path: circle(180px at center 0);
-}
-
-.card-container .card .circle h1 {
-  color: #ffff;
-  font-size: 2em;
-  padding: 30px 0;
-}
-
-.card-container .card .content {
-  position: relative;
-  bottom: 200px;
-  page-break-after: 20px;
-  text-align: center;
-}
-
-.card-container .card .content p {
-  color: rgba(29, 28, 28, 0.6);
-}
-
-.card-container .card .content a {
-  width: 140px;
-  position: relative;
-  display: inline-block;
-  border: 0;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background: #000;
-  padding: 10px 20px;
-  margin: 7px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: width 0.5s;
-}
-
-.card-container .card:hover {
-  transform: scale(1.05);
-}
-
-.about-container {
-  position: absolute;
-  flex: 1;
-  right: 70px;
-  top: 210%;
-  text-align: center;
-  width: 70%;
-  margin-right: 10%;
-}
-
-.about-container h1 {
-  font-size: 2em;
-  padding: 30px 0;
-}
-.about-container p {
-  font-size: 1em;
-  font-weight: 100px;
-}
-
-.form-container {
-  position: absolute;
-  flex: 1;
-  right: 52%;
-  top: 250%;
-}
-
-.form-container .form {
-  width: 440px;
-  height: 480px;
-  right: -254px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 40px -10px #000;
-  margin: calc(50vh - 220px) auto;
-  padding: 20px 30px;
-  max-width: calc(100vw - 40px);
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  position: relative;
-}
-.form-container .form h2 {
-  margin: 10px 0;
-  padding-bottom: 10px;
-  width: 180px;
-  color: #78788c;
-  border-bottom: 3px solid #78788c;
-}
-.form-container .form input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  background: none;
-  outline: none;
-  resize: none;
-  border: 0;
-  font-family: 'Montserrat', sans-serif;
-  transition: all 0.3s;
-  border-bottom: 2px solid #bebed2;
-}
-.form-container .form input:focus {
-  border-bottom: 2px solid #78788c;
-}
-.form-container .form p:before {
-  content: attr(type);
-  display: block;
-  margin: 28px 0 0;
-  font-size: 14px;
-  color: #5a5a5a;
-}
-.form-container .form button {
-  float: right;
-  padding: 8px 12px;
-  margin: 8px 0 0;
-  font-family: 'Montserrat', sans-serif;
-  border: 2px solid #78788c;
-  background: 0;
-  color: #5a5a6e;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.form-container .form button:hover {
-  background: #78788c;
-  color: #fff;
-}
-.phone-container {
-  content: 'Hi';
-  position: absolute;
-  bottom: -15px;
-  right: -20px;
-  background: #50505a;
-  color: #fff;
-  width: 320px;
-  padding: 16px 4px 16px 0;
-  border-radius: 6px;
-  font-size: 13px;
-  box-shadow: 10px 10px 40px -14px #000;
-}
-span {
-  margin: 0 5px 0 15px;
-}
-
-.map {
-  position: absolute;
-  filter: grayscale();
-  top: 16%;
-  height: 900px;
-  left: 50%;
-  z-index: -1;
-}
-
-.triangle-left {
-  height: 60%;
-  width: 200%;
-
-  border-top: 25px solid transparent;
-  border-right: 50px solid #555;
-  border-bottom: 25px solid transparent;
-}
-.card-container .card:nth-child(1) .circle,
-.card-container .card:nth-child(1) .content a {
-  background: #ffaf00;
-}
-
-.card-container .card:nth-child(2) .circle,
-.card-container .card:nth-child(2) .content a {
-  background: #ff0040;
-}
-.card-container .card:nth-child(3) .circle,
-.card-container .card:nth-child(3) .content a {
-  background: #e100ff;
-}
-.sociallinks li {
-  list-style: none;
-  width: 100px;
-}
-.sociallinks ul li {
-  position: relative;
-  top: 485px;
-  width: 50px;
-  list-style: none;
-  display: inline-block;
-  margin-right: 1px;
-}
-
-footer {
-  clear: both;
-  position: relative;
-  margin-top: 170%;
-  background: #000;
-  padding: 30px 0px;
-  font-family: 'Play', sans-serif;
-}
-
-.footer .column {
-  width: 20%;
-  margin: 0% 1%;
-  display: inline-block;
-}
-
-.footer .column ul {
-  width: 100%;
-}
-
-.footer .column ul li {
-  list-style: none;
-  padding: 5px 0px;
-  color: gray;
-}
-
-.footer .column ul li a {
-  text-decoration: none;
-  font-size: 1em;
-  color: gray;
-  transition: 0.5s;
-}
-
-.footer .column ul li a:hover {
-  color: #f7bd00;
-}
-
-.footer .column ul .title {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.2em;
-  color: #fff;
-}
-
-.footer .column ul li input {
-  padding: 10px 5px;
-  outline: none;
-  border: 0;
-  width: 70%;
-  height: 40px;
-  color: #1e1e1e;
-}
-
-.footer .column ul li .btn1 {
-  outline: none;
-  border: 0;
-  padding: 5px;
-  color: #fff;
-  height: 44px;
-  position: relative;
-  top: 1px;
-  font-size: 0.5em;
-  background: #f7bd00;
-}
-
-.footer .column ul li i {
-  font-size: 2em;
-  margin: 0px 10px;
-}
-
-.sub-footer {
-  background: #1e1e1e;
-  padding: 5px 0px;
-  text-align: center;
-  color: gray;
-  font-size: 12px;
-  font-family: 'Play', sans-serif;
-}
 
 @media only screen and (max-width: 700px) {
   nav ul {
-    width: 150%;
-    background: linear-gradient(#c0fe44, #2cff02);
-    position: absolute;
-    top: 75px;
+    text-align: center;
+    position: fixed;
+    top: var(--header);
+    margin: 0 0.5rem;
+    box-shadow: black;
     right: 0;
+    left: 0;
     z-index: 2;
+    background: var(--first-color-lighter);
+    border-radius: 10px;
   }
 
   nav ul li {
@@ -484,50 +223,5 @@ footer {
 
   .color-box p {
     display: none;
-  }
-
-  .card-container {
-    width: 95%;
-    left: 19px;
-    justify-content: center;
-  }
-
-  .card-container .card .circle h1 {
-    color: #ffff;
-    font-size: 1.7em;
-    padding: 20px 0;
-  }
-  .card-container .card {
-    left: -10px;
-    justify-content: center;
-  }
-
-  .form-container {
-    clear: both;
-    position: relative;
-    margin-top: 521%;
-    right: 48%;
-    width: 80%;
-    top: 382%;
-  }
-  .about-container {
-    position: absolute;
-    top: 340%;
-    right: 16px;
-  }
-  .footer {
-    clear: both;
-    position: relative;
-  }
-  .footer .column {
-    width: 90%;
-    display: block;
-    margin: 0% 0%;
-  }
-
-  .footer .column:nth-child(2),
-  .footer .column:nth-child(3) {
-    width: 40%;
-    display: inline-block;
   }
 }
