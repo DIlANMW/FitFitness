@@ -4,20 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fitfitness</title>
+
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet' />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
+
 
 </head>
 
 <body>
     <div class="container">
         <div class="navbar">
-            <h2>Fitfitness</h2>
+            <h2 class="logo">Fitfitness</h2>
             <nav>
-                <ul id=navlist>
+                <ul id="navlist">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Abouth</a></li>
                     <li><a href="#">Service</a></li>
@@ -25,70 +30,94 @@
 
                 </ul>
             </nav>
-            <img class="menuicon" src="/img/iconfinder_icons_menu_1564512.png" onclick="togglemenu()">
+            <div class="menuicon">
+                <i class='bx bx-menu' onclick="togglemenu()"></i>
+            </div>
+            <!-- <img class="menuicon" src="/img/iconfinder_icons_menu_1564512.png> -->
+
         </div>
 
         <main class="main">
-            <div>
-                <div>
-                    <section class="slide1"></section>
+            <div class="wrapper">
+                <div class="slide-container">
+                    <section class="slides fade " style="display: none;">
+                        <img src="/img/slide1.jpg" alt="" class="slider_img">
+                        <div class="slider_container normal-container">
+                            <div class="slide-data">
+                                <h2 class="slide-title">
+                                    Pro Chochers</h2>
+                                <h1 class="slide-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                                    hendrerit dictum ligula vitae vehicula. Morbi ut lectus vel purus imperdiet vehicula
+                                    vitae in odio. Donec sed sapien cursus, rhoncus est non, maximus lorem. Class aptent
+                                    taciti sociosqu ad litora torquent per conubia nostra,
+                                </h1>
+                                <button class="findmore">Find more <i class='bx bx-right-arrow-circle'></i></button>
+                            </div>
+                        </div>
+                    </section>
 
-                    <section class="slide1"></section>
+                    <section class="slides fade " style="display: block;">
+                        <img src=" /img/slide2.jpg" alt="" class="slider_img">
+                        <div class="slider_container normal-container">
+                            <div class="slide-data">
+                                <h2 class="slide-title">
+                                    No Gender limit</h2>
+                                <h1 class="slide-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                                    hendrerit dictum ligula vitae vehicula. Morbi ut lectus vel purus imperdiet vehicula
+                                    vitae in odio. Donec sed sapien cursus, rhoncus est non, maximus lorem. Class aptent
+                                    taciti sociosqu ad litora torquent per conubia nostra,</h1>
+                                <button class="findmore">Find more <i class='bx bx-right-arrow-circle'></i></button>
+                            </div>
+                        </div>
+                    </section>
 
-                    <section class="slide1"></section>
+
+                    <section class="slides fade" style="display: none;"><img src="/img/slide3.jpg" alt=""
+                            class="slider_img">
+                        <div class="slider_container normal-container">
+                            <div class="slide-data">
+                                <h2 class="slide-title">
+                                    All Equipments</h2>
+                                <h1 class="slide-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                                    hendrerit dictum ligula vitae vehicula. Morbi ut lectus vel purus imperdiet vehicula
+                                    vitae in odio. Donec sed sapien cursus, rhoncus est non, maximus lorem. Class aptent
+                                    taciti sociosqu ad litora torquent per conubia nostra,</h1>
+                                <button class="findmore">Find more <i class='bx bx-right-arrow-circle'></i></button>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
+            <div class="slide-controls ">
+                <div class="control-container ">
+
+                    <span onclick="currentSlide(1)"><img src="/img/slide1.jpg" alt="" class="aroimg"></span>
+                    <span onclick="currentSlide(2)"><img src="/img/slide2.jpg" alt="" class="aroimg"></span>
+                    <span onclick="currentSlide(3)"><img src="/img/slide3.jpg" alt="" class="aroimg"></span>
+                </div>
+            </div>
+
+
         </main>
-        <section class="offer">
-            <div class="row">
-                <div class="col">
-                    <h1 class="membertxt">Get Membership Now </h1>
-                    <h2>Hysical fitness is a state of health and well-being and, more specifically, the ability to
-                        perform
-                        aspects of sports, occupations and daily activities.
-                        <h4>Rs 1000</h4>
-                    </h2><button type="button">Learn More <i class='bx bxs-right-arrow-circle'
-                            style='color:#ffffff'></i></button>
-                </div>
-                <div class="col2">
-                    <img src="/img/fitness2.png" class="man" />
-                    <div class="color-box">
-                        <img src="/img/add.png" alt="" />
-                        <p>Get now 30% off</p>
-                    </div>
-                </div>
-        </section>
 
 
-    </div>
     </div>
     <div>
+        <div class="About-container normal-container">
+            <h1 class="topic">About</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate vitae diam id posuere. In congue,
+                mi ac rutrum elementum, sapien augue laoreet est, id venenatis enim augue sed tellus. Praesent id tortor
+                id turpis mollis faucibus. Praesent pretium, est ac finibus sollicitudin, ante nunc imperdiet erat,
+                porttitor hendrerit eros nisl nec sem. Suspendisse potenti. Nulla libero magna, feugiat sed viverra
+                quis, accumsan a purus. In efficitur tortor in tortor accumsan volutpat. Phasellus sed eleifend erat.
+                Vivamus semper cursus eleifend. Mauris tempor blandit arcu id gravida.</p>
+
+        </div>
+
+        <script src="/js/main.js"></script>
 
 
 
-
-
-
-
-
-
-
-
-
-        <script>
-            var navmenu = document.getElementById("navlist");
-            navlist.style.maxHeight = "0px";
-
-            function togglemenu() {
-                if (navlist.style.maxHeight == "0px") {
-                    navlist.style.maxHeight = "150px";
-                    // navlist.style.display = "block";
-                } else {
-                    navlist.style.maxHeight = "0px";
-                    // navlist.style.display = "none";
-                }
-            }
-        </script>
-
+</body>
 
 </html>
